@@ -1,20 +1,73 @@
-#logoBar{
-  width: 30vw;
-  height: 100vh;
-}
-#siteLogo{
-  width: 100%;
-}
 body {
   display: flex;
+  flex-direction: row;
+  background-color: rgb(40, 40, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
 }
-#staffGallery{
-  width: 70vw;
-  display: inherit;
 
+#siteLogo{
+  min-width: 100px;
+  max-width: 400px;
+  height: auto;
 }
-.galleryImage{
+
+.logoBar {
+  text-align: center;
+}
+
+h1 {
+	font-size: 24px;
+  font-weight: bold;
+  color: rgb(250, 89, 71);
+  text-align: center;
+}
+
+h3 {
+	font-size: 18px;
+  font-style: italic;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+}
+
+.staffGallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%; 
+}
+
+.card {
+  background-color: rgb(250, 160, 71); 
+  box-shadow: 2px 4px 2px rgb(27, 8, 113); 
+  border-radius: 5px;
+  flex: 1 1 auto;
+  border: 2px solid rgb(250, 89, 71);
+  margin: 10px;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+}
+
+.card .galleryImage{
   width: 100%;
   height: auto;
-  height: 300px;
+}
+
+.card .character-name {
+  font-size: 12px;
+  color:white;
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column; 
+    align-items: stretch;
+  }
+
+  .staffGallery {
+    flex-direction: row; 
+    width: auto; 
+  }
 }
